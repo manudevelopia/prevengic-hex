@@ -13,6 +13,7 @@ class ComposeRepositoryImpl implements ComposeRepository {
         persistenceService.getSqlSession().getMapper(ComposeMapper).getByNcas(ncas)
     }
 
+    @Override
     List<Compose> getAll() {
         persistenceService.getSqlSession().getMapper(ComposeMapper).getAll()
     }
