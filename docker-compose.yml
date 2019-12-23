@@ -1,0 +1,38 @@
+version: "3"
+
+services:
+
+  lep-api:
+    build: ./lep-api
+    image: manudevelopia/lep-api:latest
+    container_name: lep-api
+
+  prevengic-api:
+    build: ./prevengic-api
+    image: manudevelopia/prevengic-api:latest
+    container_name: prevengic-api
+
+  lep-api-db:
+    image: postgres
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=LEP_DB
+    ports:
+      - 5433:5432
+    volumes:
+      - ./sql/lep-api/schema.sql:/docker-entrypoint-initdb.d/1-schema.sql
+      - ./sql/lep-api/data.sql:/docker-entrypoint-initdb.d/2-data.sql
+
+  prevengic-db:
+    image: postgres
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=PREVENGIC_DB
+    ports:
+      - 5432:5432
+    volumes:
+      - ./sql/prevengic-api/schema.sql:/docker-entrypoint-initdb.d/1-schema.sql
+      - ./sql/prevengic-api/data.sql:/docker-entrypoint-initdb.d/2-data.sql
+

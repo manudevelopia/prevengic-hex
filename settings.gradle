@@ -1,0 +1,5 @@
+rootProject.name = 'prevengic-app'
+
+include 'prevengic-core'
+include 'prevengic-api'
+include 'prevengic-infra'
