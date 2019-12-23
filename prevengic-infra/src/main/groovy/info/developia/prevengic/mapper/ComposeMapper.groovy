@@ -2,8 +2,10 @@ package info.developia.prevengic.mapper
 
 import info.developia.prevengic.model.Compose
 import org.apache.ibatis.annotations.Insert
+import org.apache.ibatis.annotations.Mapper
 import org.apache.ibatis.annotations.Select
 
+@Mapper
 interface ComposeMapper {
 
     @Select("SELECT * FROM prevengic.composes")

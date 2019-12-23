@@ -9,3 +9,13 @@ Content-Type: application/json
 }
 
 ###
+
+GET http://localhost:8080/composes/all
+Accept: application/json
+
+###
+
+GET http://localhost:8080/composes?ncas=99
+Accept: application/json
+
+###

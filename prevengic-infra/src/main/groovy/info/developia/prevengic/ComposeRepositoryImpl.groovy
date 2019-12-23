@@ -6,23 +6,25 @@ import info.developia.prevengic.repository.ComposeRepository
 
 class ComposeRepositoryImpl implements ComposeRepository {
 
-    PersistenceService persistenceService = new PersistenceService()
+    ComposeMapper composeMapper
+
+    ComposeRepositoryImpl(ComposeMapper composeMapper) {
+        this.composeMapper = composeMapper
+    }
 
     @Override
     Optional<Compose> getByNcas(String ncas) {
-        persistenceService.getSqlSession().getMapper(ComposeMapper).getByNcas(ncas)
+        Optional.ofNullable(composeMapper.getByNcas(ncas))
     }
 
     @Override
     List<Compose> getAll() {
-        persistenceService.getSqlSession().getMapper(ComposeMapper).getAll()
+        composeMapper.getAll()
     }
 
     @Override
     int save(Compose compose) {
-        int result = persistenceService.getSqlSession().getMapper(ComposeMapper).save(compose)
-        persistenceService.getSqlSession().commit()
-        return result
+        composeMapper.save(compose)
     }
-    
+
 }
