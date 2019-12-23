@@ -22,4 +22,9 @@ class ComposeServiceImpl implements ComposeService {
     List<Compose> getAll() {
         return composeRepository.getAll()
     }
+
+    @Override
+    int save(Compose compose) {
+        return composeRepository.save(compose)
+    }
 }

@@ -4,6 +4,8 @@ import info.developia.prevengic.model.Compose
 import info.developia.prevengic.service.ComposeService
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PostMapping
+import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
@@ -21,5 +23,10 @@ class ComposeController {
     ResponseEntity<Compose> getAll() {
         ResponseEntity.ok(composeService.getAll())
     }
-    
+
+    @PostMapping
+    ResponseEntity save(@RequestBody Compose compose){
+        ResponseEntity.ok(composeService.save(compose))
+    }
+
 }

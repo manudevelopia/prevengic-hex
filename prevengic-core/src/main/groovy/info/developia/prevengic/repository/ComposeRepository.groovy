@@ -6,5 +6,6 @@ interface ComposeRepository {
 
     Optional<Compose> getByNcas(String ncas)
     List<Compose> getAll()
-    
+    int save(Compose compose)
+
 }

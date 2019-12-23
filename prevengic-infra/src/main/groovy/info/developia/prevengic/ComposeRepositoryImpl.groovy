@@ -18,9 +18,11 @@ class ComposeRepositoryImpl implements ComposeRepository {
         persistenceService.getSqlSession().getMapper(ComposeMapper).getAll()
     }
 
+    @Override
     int save(Compose compose) {
         int result = persistenceService.getSqlSession().getMapper(ComposeMapper).save(compose)
         persistenceService.getSqlSession().commit()
         return result
     }
+    
 }

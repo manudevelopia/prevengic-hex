@@ -7,4 +7,5 @@ interface ComposeService {
     Compose getByNcas(String ncas)
     List<Compose> getAll()
 
+    int save(Compose compose)
 }

@@ -1,0 +1,11 @@
+POST http://localhost:8080/composes
+Content-Type: application/json
+
+{
+  "name":  "this is name",
+  "description": "this is description",
+  "ncas":  "ncas 1",
+  "nce": "nce 1"
+}
+
+###
