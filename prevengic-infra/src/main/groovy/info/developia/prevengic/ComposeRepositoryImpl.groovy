@@ -14,7 +14,7 @@ class ComposeRepositoryImpl implements ComposeRepository {
 
     @Override
     Optional<Compose> getByNcas(String ncas) {
-        Optional.ofNullable(composeMapper.getByNcas(ncas))
+        composeMapper.getByNcas(ncas)
     }
 
     @Override

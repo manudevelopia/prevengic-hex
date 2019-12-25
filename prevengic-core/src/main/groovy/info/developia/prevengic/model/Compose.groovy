@@ -7,4 +7,7 @@ public class Compose {
     String ncas
     String nce
 
+    ChemicalProfile chemicalProfile
+    List<Note> notes
+
 }
