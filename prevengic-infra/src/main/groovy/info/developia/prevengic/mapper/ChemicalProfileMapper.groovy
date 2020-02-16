@@ -9,10 +9,10 @@ import org.apache.ibatis.annotations.Select
 @Mapper
 interface ChemicalProfileMapper {
 
-    @Select("SELECT * FROM prevengic.chemical_profile WHERE id=#{id}")
+    @Select("SELECT * FROM lep.chemical_profile WHERE lep_id=#{id}")
     @Results([
-            @Result(property = "vlaEd", column = "vla_ed"),
-            @Result(property = "vlaEc", column = "vla_ec")
+            @Result(property = "vlaEd", column = "lep_vla_ed"),
+            @Result(property = "vlaEc", column = "lep_vla_ec")
     ])
     ChemicalProfile getChemicalProfileById(Long id)
 

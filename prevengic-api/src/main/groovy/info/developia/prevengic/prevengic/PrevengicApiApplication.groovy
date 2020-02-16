@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 @SpringBootApplication
 class PrevengicApiApplication {
 
-	static void main(String[] args) {
-		SpringApplication.run(PrevengicApiApplication, args)
-	}
+    static void main(String[] args) {
+        SpringApplication.run(PrevengicApiApplication, args)
+    }
 
 }

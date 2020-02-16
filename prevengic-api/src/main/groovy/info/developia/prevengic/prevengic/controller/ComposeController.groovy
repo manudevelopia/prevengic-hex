@@ -16,7 +16,7 @@ class ComposeController {
     }
 
     @GetMapping("/all")
-    ResponseEntity<Compose> getAll() {
+    ResponseEntity<List<Compose>> getAll() {
         ResponseEntity.ok(composeService.getAll())
     }
 

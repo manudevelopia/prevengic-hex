@@ -1,4 +1,4 @@
-package info.developia.prevengic.prevengic
+package info.developia.prevengic.prevengic.config
 
 import info.developia.prevengic.ComposeRepositoryImpl
 import info.developia.prevengic.mapper.ComposeMapper
@@ -18,7 +18,7 @@ class ApplicationConfig {
     private final ComposeMapper composeMapper
 
     @Bean
-    public ComposeService getConposeService() {
+    public ComposeService getComposeService() {
         return new ComposeServiceImpl(composeRepository)
     }
 

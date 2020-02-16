@@ -6,6 +6,8 @@ services:
     build: ./prevengic-api
     image: manudevelopia/prevengic-api:latest
     container_name: prevengic-api
+    ports:
+    - 8080:8080
 
   prevengic-db:
     image: postgres

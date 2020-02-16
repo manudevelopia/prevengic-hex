@@ -8,4 +8,6 @@ WORKDIR ${APP_ROOT}
 
 COPY build/libs/*.jar ${APP_ROOT}/run.jar
 
+EXPOSE 8080
+
 ENTRYPOINT ["java","-Dspring.profiles.active=dev","-Djava.security.egd=file:/dev/./urandom", "-jar", "run.jar"]
