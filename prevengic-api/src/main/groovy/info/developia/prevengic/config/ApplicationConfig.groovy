@@ -1,4 +1,4 @@
-package info.developia.prevengic.prevengic.config
+package info.developia.prevengic.config
 
 import info.developia.prevengic.ComposeRepositoryImpl
 import info.developia.prevengic.mapper.ComposeMapper
