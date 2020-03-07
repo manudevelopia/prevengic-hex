@@ -4,7 +4,7 @@ services:
 
   prevengic-api:
     build: ./prevengic-api
-    image: manudevelopia/prevengic-api:latest
+    image: developia/prevengic-api:latest
     container_name: prevengic-api
     ports:
     - 8080:8080
