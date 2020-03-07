@@ -18,12 +18,12 @@ class ApplicationConfig {
     private final ComposeMapper composeMapper
 
     @Bean
-    public ComposeService getComposeService() {
+    ComposeService getComposeService() {
         return new ComposeServiceImpl(composeRepository)
     }
 
     @Bean
-    public ComposeRepository getComposeRepository() {
+    ComposeRepository getComposeRepository() {
         return new ComposeRepositoryImpl(composeMapper)
     }
 

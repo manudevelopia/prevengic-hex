@@ -1,6 +1,6 @@
 package info.developia.prevengic.model
 
-public class Compose {
+class Compose {
 
     String name
     String description

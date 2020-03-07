@@ -1,6 +1,6 @@
 package info.developia.prevengic.model
 
-public class ChemicalProfile {
+class ChemicalProfile {
 
     Double vlaEd
     Double vlaEc
