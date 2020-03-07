@@ -9,13 +9,13 @@ before_install:
   - echo "$HEROKU_PASSWORD" | docker login -u "$HEROKU_USER" --password-stdin registry.heroku.com
 
 script:
-  - docker build -t manudevelopia/prevengic-api ./prevengic-port
-  - docker tag manudevelopia/prevengic-api registry.heroku.com/prevengic-api/web
+  - docker build -t developia/prevengic-api ./prevengic-port
+  - docker tag developia/prevengic-api registry.heroku.com/prevengic-api/web
 
 deploy:
   provider: script
   script:
-    docker push manudevelopia/prevengic-api;
+    docker push developia/prevengic-api;
     docker push registry.heroku.com/prevengic-api/web;
     heroku container:login;
     heroku container:release web -a prevengic-api
