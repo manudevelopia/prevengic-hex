@@ -7,11 +7,9 @@ before_install:
   - wget -qO- https://toolbelt.heroku.com/install.sh | sh
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USER" --password-stdin
   - echo "$HEROKU_PASSWORD" | docker login -u "$HEROKU_USER" --password-stdin registry.heroku.com
-
 script:
-  - docker build -t developia/prevengic-api ./prevengic-port
+  - docker build -t developia/prevengic-api ./prevengic-api
   - docker tag developia/prevengic-api registry.heroku.com/prevengic-api/web
-
 deploy:
   provider: script
   script:
