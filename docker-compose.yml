@@ -8,6 +8,8 @@ services:
     container_name: prevengic-api
     ports:
     - 8080:8080
+    depends_on:
+      - prevengic-db
 
   prevengic-db:
     image: postgres
