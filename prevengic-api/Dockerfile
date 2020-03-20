@@ -1,4 +1,4 @@
-FROM openjdk:11-jre-slim
+FROM openjdk:13-alpine
 
 ENV APP_ROOT /app
 
@@ -10,4 +10,4 @@ COPY build/libs/*.jar ${APP_ROOT}/run.jar
 
 EXPOSE 8080
 
-ENTRYPOINT ["java","-Dspring.profiles.active=dev","-Djava.security.egd=file:/dev/./urandom", "-jar", "run.jar"]
+ENTRYPOINT ["java","-Dspring.profiles.active=docker","-Djava.security.egd=file:/dev/./urandom", "-jar", "run.jar"]
