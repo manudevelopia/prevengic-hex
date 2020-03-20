@@ -5,3 +5,5 @@ out
 
 .terraform
 *.backup
+
+.DS_Store
