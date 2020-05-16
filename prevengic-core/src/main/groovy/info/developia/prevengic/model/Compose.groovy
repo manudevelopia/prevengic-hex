@@ -1,5 +1,8 @@
 package info.developia.prevengic.model
 
+import groovy.transform.Immutable
+
+@Immutable
 class Compose {
 
     String name
@@ -9,5 +12,4 @@ class Compose {
 
     ChemicalProfile chemicalProfile
     List<Note> notes
-
 }
