@@ -8,12 +8,13 @@ This application tries to support Chemical pollution contaminators calculation o
 
 ## Application
 This application has been developed using:
- - Java 
+ - Java | Groovy
  - SpringBoot
+ - MyBatis
  - PostgreSQL
  
 ## Testing
- - Spock
+ - Spock framework
 
 ## Deploy
 You can have a try to this app at https://prevengic-api.herokuapp.com/
