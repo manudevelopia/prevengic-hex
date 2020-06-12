@@ -3,7 +3,9 @@ version: "3"
 services:
 
   prevengic-api:
-    build: ./prevengic-api
+    build:
+      context: ./
+      dockerfile: prevengic-api/docker
     image: developia/prevengic-api:latest
     container_name: prevengic-api
     ports:

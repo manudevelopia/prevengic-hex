@@ -6,6 +6,6 @@ services:
 before_install:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USER" --password-stdin
 script:
-  - docker build -f docker/Dockerfile -t prevengic-api .
+  - docker build -f docker/Dockerfile -t -t developia/prevengic-api .
   - docker tag developia/prevengic-api registry.heroku.com/prevengic-api/web
   - docker push developia/prevengic-api
