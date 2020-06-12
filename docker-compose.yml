@@ -5,7 +5,7 @@ services:
   prevengic-api:
     build:
       context: ./
-      dockerfile: prevengic-api/docker
+      dockerfile: docker/Dockerfile
     image: developia/prevengic-api:latest
     container_name: prevengic-api
     ports:
