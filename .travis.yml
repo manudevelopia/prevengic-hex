@@ -8,4 +8,4 @@ before_install:
 script:
   - docker build -f docker/Dockerfile -t developia/prevengic-api .
   - docker tag developia/prevengic-api registry.heroku.com/prevengic-api/web
-  - docker push developia/prevengic-api
+  - docker push registry.heroku.com/prevengic-api/web
