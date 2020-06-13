@@ -1,6 +1,5 @@
 package info.developia.prevengic.controller
 
-import info.developia.prevengic.exception.ComposeNotFoundException
 import info.developia.prevengic.model.Compose
 import info.developia.prevengic.service.ComposeService
 import org.springframework.http.ResponseEntity
