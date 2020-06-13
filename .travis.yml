@@ -5,16 +5,13 @@ services:
   - docker
 before_install:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USER" --password-stdin
-  - echo "$HEROKU_PASSWORD" | docker login -u "$HEROKU_USERNAME" --password-stdin registry.heroku.com
 
 script:
   - docker build -f docker/Dockerfile -t developia/prevengic-api .
-  - docker tag developia/prevengic-api registry.heroku.com/$HEROKU_APP_NAME/web
 
 deploy:
   provider: script
   script:
     docker push developia/prevengic-api;
-    docker push registry.heroku.com/$HEROKU_APP_NAME/web;
   on:
     branch: master
