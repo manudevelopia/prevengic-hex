@@ -18,8 +18,7 @@ class ComposeController {
 
     @GetMapping("/all")
     ResponseEntity<List<Compose>> getAll() {
-        throw new ComposeNotFoundException("sdads")
-//        ResponseEntity.ok(composeService.getAll())
+        ResponseEntity.ok(composeService.getAll())
     }
 
     @GetMapping
