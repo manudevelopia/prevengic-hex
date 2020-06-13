@@ -1,1 +1,1 @@
-web java -Dserver.port=$PORT $JAVA_OPTS -jar -Dspring.profiles.active=heroku prevengic-api/build/libs/*.jar
+web: java -Dserver.port=$PORT $JAVA_OPTS -jar -Dspring.profiles.active=heroku prevengic-api/build/libs/*.jar
