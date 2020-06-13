@@ -10,4 +10,4 @@ COPY prevengic-api/build/libs/*.jar ${APP_ROOT}/run.jar
 
 EXPOSE 8080
 
-CMD [ "sh", "-c", "java -Dserver.port=$PORT $JAVA_OPTS -XX:+UseContainerSupport -Dspring.profiles.active=docker -Djava.security.egd=file:/dev/./urandom -jar /app.jar" ]
+CMD [ "sh", "-c", "java -Dspring.profiles.active=docker -Djava.security.egd=file:/dev/./urandom -jar /app.jar" ]
