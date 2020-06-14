@@ -8,6 +8,11 @@ class ComposeServiceImpl implements ComposeService {
 
     final ComposeRepository composeRepository
 
+    @Override
+    List<Compose> getAll() {
+        return composeRepository.getAll()
+    }
+
     ComposeServiceImpl(ComposeRepository composeRepository) {
         this.composeRepository = composeRepository
     }
@@ -18,13 +23,16 @@ class ComposeServiceImpl implements ComposeService {
                 .orElseThrow({ new ComposeNotFoundException() })
     }
 
+
     @Override
-    List<Compose> getAll() {
-        return composeRepository.getAll()
+    Compose getByNce(String nce) {
+        return composeRepository.getByNce(nce)
+                .orElseThrow({ new ComposeNotFoundException() })
     }
 
     @Override
-    int save(Compose compose) {
-        return composeRepository.save(compose)
+    Compose getByName(String name) {
+        return composeRepository.getByName(name)
+                .orElseThrow({ new ComposeNotFoundException() })
     }
 }

@@ -4,8 +4,8 @@ import info.developia.prevengic.model.Compose
 
 interface ComposeService {
 
-    Compose getByNcas(String ncas)
     List<Compose> getAll()
-    int save(Compose compose)
-
+    Compose getByNcas(String ncas)
+    Compose getByNce(String nce)
+    Compose getByName(String name)
 }

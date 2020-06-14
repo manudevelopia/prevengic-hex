@@ -13,18 +13,22 @@ class ComposeRepositoryImpl implements ComposeRepository {
     }
 
     @Override
-    Optional<Compose> getByNcas(String ncas) {
-        composeMapper.getByNcas(ncas)
-    }
-
-    @Override
     List<Compose> getAll() {
         composeMapper.getAll()
     }
 
     @Override
-    int save(Compose compose) {
-        composeMapper.save(compose)
+    Optional<Compose> getByNcas(String ncas) {
+        composeMapper.getByNcas(ncas)
     }
 
+    @Override
+    Optional<Compose> getByNce(String nce) {
+        composeMapper.getByNce(nce)
+    }
+
+    @Override
+    Optional<Compose> getByName(String name) {
+        composeMapper.getByName(name)
+    }
 }
