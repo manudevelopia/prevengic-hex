@@ -50,7 +50,7 @@ interface ComposeMapper {
     ])
     Optional<Compose> getByNce(String nce)
 
-    @Select("SELECT * FROM lep.composes WHERE lep_name LIKE %#{name}%")
+    @Select("SELECT * FROM lep.composes WHERE lep_name LIKE #{name}")
     @Results([
             @Result(property = "name", column = "lep_name"),
             @Result(property = "description", column = "lep_description"),
